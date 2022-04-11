@@ -257,7 +257,9 @@
   margin-top: 18rem;
   height: 70vh;
   background: url("/images/back-Rectangle.svg"), url("/images/Mask-group1.svg");
+  background-position: top 0px left -199px, top 2px right -14px;
   background-size: cover;
+  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -428,5 +430,188 @@
 .locations .all-locations .location-box .contact-images img {
   margin-right: 30px;
   margin-top: 20px;
+  cursor: pointer;
+}
+
+.sign-up {
+  position: relative;
+}
+
+.sign-up .caption {
+  position: absolute;
+  top: 5rem;
+  left: 177px;
+  padding: 8px;
+  background-color: transparent;
+  width: 27%;
+}
+
+.sign-up .caption h2 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  background-color: transparent;
+  color: white;
+}
+
+.sign-up .caption p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  color: white;
+  background-color: transparent;
+}
+
+.sign-up .sign-up-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url("/images/back-Rectangle.svg"), url("/images/bike-Maskgroup.svg");
+  background-position: top 0px left -90px, top 2px right 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 357px;
+}
+
+.sign-up .sign-up-box input {
+  width: 352px;
+  height: 36px;
+  background: #ffffff;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  padding: 0 15px;
+}
+
+.sign-up .sign-up-box .check-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 13rem;
+}
+
+.sign-up .sign-up-box .check-box .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  width: 36rem;
+  margin-top: 1rem;
+  position: relative;
+  right: 116px;
+}
+
+.sign-up .sign-up-box .check-box .container .styled-checkbox {
+  opacity: 0;
+  background-color: transparent;
+}
+
+.sign-up .sign-up-box .check-box .container .styled-checkbox + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.sign-up .sign-up-box .check-box .container .styled-checkbox + label:before {
+  content: "";
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 18px;
+  background: black;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.sign-up .sign-up-box .check-box .container .styled-checkbox:hover + label:before {
+  background: white;
+}
+
+.sign-up .sign-up-box .check-box .container .styled-checkbox:focus + label:before {
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.sign-up .sign-up-box .check-box .container .styled-checkbox:checked + label:before {
+  background: white;
+  border-radius: 3px;
+}
+
+.sign-up .sign-up-box .check-box .container .styled-checkbox:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  background: black;
+  width: 2px;
+  height: 2px;
+  -webkit-box-shadow: 2px 0 0 black, 4px 0 0 black, 4px -2px 0 black, 4px -4px 0 black, 4px -6px 0 black, 4px -8px 0 black;
+          box-shadow: 2px 0 0 black, 4px 0 0 black, 4px -2px 0 black, 4px -4px 0 black, 4px -6px 0 black, 4px -8px 0 black;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.sign-up .sign-up-box .check-box .container p {
+  background-color: transparent;
+  color: white;
+  margin-left: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.sign-up .sign-up-box .check-box .btn-primary {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  padding: 9px 45px;
+  border-radius: 30px;
+  margin-top: 1rem;
+  color: white;
+  border: 2.5px solid white;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  right: 80px;
+}
+
+.sign-up .sign-up-box .check-box .btn-primary:hover {
+  background-color: white;
+  color: black;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  border: 2.5px solid white;
 }
 /*# sourceMappingURL=style.css.map */

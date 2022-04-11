@@ -13,6 +13,8 @@ $backgroundColor: #f8f8f8;
   background-color: $backgroundColor;
 }
 
+// @import "_checkbox.scss";
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -221,7 +223,10 @@ $backgroundColor: #f8f8f8;
   margin-top: 18rem;
   height: 70vh;
   background: url("/images/back-Rectangle.svg"), url("/images/Mask-group1.svg");
+  background-position: top 0px left -199px, top 2px right -14px;
+  //   background-position: left;
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -357,6 +362,118 @@ $backgroundColor: #f8f8f8;
         img {
           margin-right: 30px;
           margin-top: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.sign-up {
+  position: relative;
+
+  .caption {
+    position: absolute;
+    top: 5rem;
+    left: 177px;
+    padding: 8px;
+    background-color: transparent;
+    width: 27%;
+
+    h2 {
+      font-family: $fontFamily;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 40px;
+      background-color: transparent;
+      color: white;
+    }
+    p {
+      font-family: $fontFamily;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      color: white;
+      background-color: transparent;
+    }
+  }
+
+  .sign-up-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url("/images/back-Rectangle.svg"),
+      url("/images/bike-Maskgroup.svg");
+    background-position: top 0px left -90px, top 2px right 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 357px;
+
+    input {
+      width: 352px;
+      height: 36px;
+      background: #ffffff;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      padding: 0 15px;
+    }
+
+    .check-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      flex-direction: column;
+      margin-left: 13rem;
+      // position: relative;
+
+      .container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: transparent;
+        width: 36rem;
+        margin-top: 1rem;
+        position: relative;
+        right: 116px;
+
+        //   position: absolute;
+
+        @import "_checkbox.scss";
+
+        p {
+          background-color: transparent;
+          color: white;
+          margin-left: 1rem;
+          font-family: $fontFamily;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 13px;
+        }
+      }
+
+      .btn-primary {
+        font-size: 20px;
+        font-weight: 600;
+        font-family: $fontFamily;
+        text-align: center;
+        padding: 9px 45px;
+        border-radius: 30px;
+        margin-top: 1rem;
+        color: white;
+        border: 2.5px solid white;
+        background-color: transparent;
+        cursor: pointer;
+        position: relative;
+        right: 80px;
+
+        &:hover {
+          background-color: white;
+          color: black;
+          transition: all 0.6s ease-in-out;
+          border: 2.5px solid white;
         }
       }
     }
