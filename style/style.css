@@ -9,7 +9,6 @@
 
 .whiteBackground {
   background-color: white;
-  border: 1px solid red;
 }
 
 .greyBackground {
@@ -23,7 +22,7 @@
   display: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .burger-menu-wrapper {
     display: block;
   }
@@ -39,39 +38,39 @@
   z-index: 2;
 }
 
-.burger-menu-wrapper #burger-menu span {
+.burger-menu-wrapper #burger-menu .burger-span {
   right: 0px;
   top: 13px;
   width: 27px;
 }
 
-.burger-menu-wrapper #burger-menu span:before {
+.burger-menu-wrapper #burger-menu .burger-span:before {
   left: 0px;
   top: -10px;
   width: 27px;
 }
 
-.burger-menu-wrapper #burger-menu span:after {
+.burger-menu-wrapper #burger-menu .burger-span:after {
   left: 0px;
   top: 10px;
   width: 27px;
 }
 
-.burger-menu-wrapper #burger-menu.close span {
+.burger-menu-wrapper #burger-menu.close .burger-span {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   top: 13px;
   width: 27px;
 }
 
-.burger-menu-wrapper #burger-menu.close span:before {
+.burger-menu-wrapper #burger-menu.close .burger-span:before {
   top: 0px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   width: 27px;
 }
 
-.burger-menu-wrapper #burger-menu.close span:after {
+.burger-menu-wrapper #burger-menu.close .burger-span:after {
   top: 0px;
   left: 0;
   -webkit-transform: rotate(90deg);
@@ -80,9 +79,9 @@
   width: 0;
 }
 
-.burger-menu-wrapper #burger-menu span,
-.burger-menu-wrapper #burger-menu span:before,
-.burger-menu-wrapper #burger-menu span:after {
+.burger-menu-wrapper #burger-menu .burger-span,
+.burger-menu-wrapper #burger-menu .burger-span:before,
+.burger-menu-wrapper #burger-menu .burger-span:after {
   background: black;
   display: block;
   height: 3px;
@@ -92,8 +91,8 @@
   transition: 0.3s ease-in-out;
 }
 
-.burger-menu-wrapper #burger-menu span:before,
-.burger-menu-wrapper #burger-menu span:after {
+.burger-menu-wrapper #burger-menu .burger-span:before,
+.burger-menu-wrapper #burger-menu .burger-span:after {
   content: "";
 }
 
@@ -109,6 +108,13 @@
   background-color: #f8f8f8;
   width: 100%;
   position: fixed;
+  z-index: 1;
+}
+
+@media (max-width: 950px) {
+  .header {
+    background-color: white;
+  }
 }
 
 .header:hover {
@@ -133,7 +139,7 @@
   padding: 10px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .header .nav {
     width: 100%;
     -webkit-transition: all 1s ease-in-out;
@@ -145,15 +151,8 @@
   float: right;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .header .nav .nav-links {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
     height: 100vh;
     width: 100%;
     z-index: 1;
@@ -167,10 +166,11 @@
   display: inline-block;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .header .nav .nav-links li {
     margin-top: 4rem;
     display: block;
+    text-align: center;
   }
 }
 
@@ -180,6 +180,13 @@
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   color: #262626;
+}
+
+@media (max-width: 950px) {
+  .header .nav .nav-links li a {
+    font-size: 22px;
+    font-weight: 900;
+  }
 }
 
 .header .burger-menu {
@@ -195,7 +202,7 @@
 }
 
 .hero-section {
-  height: 100vh;
+  height: 110vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,8 +214,25 @@
           align-items: center;
   padding: 10px;
   background-color: #f8f8f8;
-  padding-top: 2rem;
+  padding-top: 10rem;
   padding-left: 70px;
+  z-index: -1;
+}
+
+@media (max-width: 1250px) {
+  .hero-section {
+    height: 80vh;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
+}
+
+@media (max-width: 950px) {
+  .hero-section {
+    height: 60vh;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
 }
 
 .hero-section .text-caption {
@@ -222,15 +246,49 @@
   color: #262626;
 }
 
+@media (max-width: 1250px) {
+  .hero-section .text-caption h2 {
+    font-size: 60px;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
+}
+
+@media (max-width: 950px) {
+  .hero-section .text-caption h2 {
+    font-size: 40px;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
+}
+
 .hero-section .hero-image .scooter-image {
   width: 600px;
+}
+
+@media (max-width: 1250px) {
+  .hero-section .hero-image .scooter-image {
+    width: 500px;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
+}
+
+@media (max-width: 950px) {
+  .hero-section .hero-image .scooter-image {
+    width: 400px;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
 }
 
 .scooter-scroll {
   padding: 50px 106px;
   position: relative;
-  height: 100vh;
+  height: 110vh;
   margin-bottom: 14rem;
+  z-index: -1;
+  background-color: #f8f8f8;
 }
 
 .scooter-scroll .caption {
@@ -401,6 +459,7 @@
       -ms-flex-align: center;
           align-items: center;
   height: 450px;
+  z-index: -1;
 }
 
 .banner .banner-caption {
@@ -451,7 +510,7 @@
 }
 
 .locations {
-  margin-top: 70px;
+  padding-top: 70px;
   background-color: #f8f8f8;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -463,7 +522,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 140px;
+  padding-left: 140px;
+  z-index: -1;
+  height: 160vh;
 }
 
 .locations .location-caption {
@@ -518,14 +579,22 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 100vh;
+  height: 45vh;
+}
+
+@media (max-width: 1250px) {
+  .locations .all-locations {
+    -ms-flex-negative: 2;
+        flex-shrink: 2;
+  }
 }
 
 .locations .all-locations .location-box {
   background-color: #ffffff;
-  padding: 15px;
+  padding: 15px 20px;
   width: 25%;
-  margin: 30px 10px;
+  height: 200px;
+  margin: 20px 10px;
 }
 
 .locations .all-locations .location-box h2 {
@@ -746,7 +815,7 @@
   border: 2.5px solid white;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .hide {
     display: none;
   }
@@ -758,13 +827,17 @@
   transition: all 1s ease-in-out;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .hide-navlinks {
     display: block;
   }
 }
 
 .padding-reduce {
-  top: 0.5rem;
+  width: 110px;
+}
+
+.burgerSpanColor {
+  background-color: white;
 }
 /*# sourceMappingURL=style.css.map */

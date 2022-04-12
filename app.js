@@ -3,14 +3,17 @@ gsap.config({
   nullTargetWarn: false,
   trialWarn: false,
 });
-// gsap.from(".logo", { duration: 3, x: -1000, opacity: 0, ease: "back" });
+gsap.from(".animation", { duration: 3, x: -1000, opacity: 0 });
+gsap.from(".scooter-animation", {
+  duration: 3,
+  x: 1000,
+  opacity: 0,
+});
 
 // -----Horizontal Slider -----------
 
 const swiper = new Swiper(".swiper", {
-  // Optional parameters
   direction: "horizontal",
-  //   loop: true,
   speed: 400,
 
   breakpoints: {
@@ -28,9 +31,13 @@ const swiper = new Swiper(".swiper", {
       slidesPerView: 2.7,
       spaceBetween: 30,
     },
+    1200: {
+      slidesPerView: 3.7,
+      spaceBetween: 30,
+    },
     // when window width is >= 640px
     1470: {
-      slidesPerView: 3.7,
+      slidesPerView: 4.4,
       spaceBetween: 40,
     },
     1800: {
@@ -152,8 +159,10 @@ function locationsDisplay(local) {
 const burgerMenu = document.getElementById("burger-menu");
 const burgerMenuWrapper = document.querySelector(".burger-menu-wrapper");
 const nav = document.querySelector("#nav");
+const logoImg = document.querySelector("#logo-img");
 const navLinks = document.querySelector("#nav-links");
 const burgerWrap = document.querySelector(".burger-menu-wrapper");
+const burgerSpan = document.querySelector("#burger-span");
 // const header = document.querySelector("#header");
 
 // ---- Page scroll --------------
@@ -161,12 +170,12 @@ const burgerWrap = document.querySelector(".burger-menu-wrapper");
 window.addEventListener("scroll", (e) => {
   if (window.innerHeight + window.pageYOffset == window.innerHeight) {
     navLinks.classList.remove("hide-navlinks");
-    burgerWrap.classList.remove("padding-reduce");
+    logoImg.classList.remove("padding-reduce");
 
     console.log("At top");
   } else {
     navLinks.classList.add("hide-navlinks");
-    burgerWrap.classList.add("padding-reduce");
+    logoImg.classList.add("padding-reduce");
   }
 });
 
@@ -175,4 +184,20 @@ window.addEventListener("scroll", (e) => {
 burgerMenuWrapper.addEventListener("click", function () {
   burgerMenu.classList.toggle("close");
   nav.classList.toggle("hide");
+  burgerSpan.classList.toggle("burgerSpanColor");
 });
+
+// ------------
+// $(document).ready(function () {
+//   $("#burger-menu").click(function () {
+//     $(this).toggleClass("open");
+//   });
+// });
+// $(document).ready(function () {
+//   $(".burger-menu-wrapper").click(function () {
+//     $("#burger-menu").toggleClass("open");
+//     $("#nav").toggleClass("hide");
+//     //     $("#burger-span").toggleClass("burgerSpanColor");
+//     $('[id="burger-span"]').toggleClass("burgerSpanColor");
+//   });
+// });

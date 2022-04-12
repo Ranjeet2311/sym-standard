@@ -13,8 +13,8 @@
 
 <body>
       <header id="header" class="header">
-            <div class="logo">
-                  <img class="logo-img" src="./images/SYM_logo 2.svg" alt="logo" srcset="">
+            <div id="logo" class="logo">
+                  <img id="logo-img" class="logo-img" src="./images/SYM_logo 2.svg" alt="logo" srcset="">
             </div>
             <div id="nav" class="nav hide">
                   <!-- <ul id="menu" class="nav-links "> -->
@@ -29,8 +29,11 @@
 
             <div class="burger-menu-wrapper">
 
-                  <div id="burger-menu">
-                        <span></span>
+                  <div id="burger-menu" class="burger-menu">
+                        <!-- <span id="burger-span"></span>
+                        <span id="burger-span"></span>
+                        <span id="burger-span"></span> -->
+                        <span id="burger-span" class="burger-span"></span>
                   </div>
             </div>
             <!-- <div class="burger-menu">
@@ -41,10 +44,10 @@
       </header>
 
       <section class="hero-section">
-            <div class="text-caption">
+            <div class="text-caption  animation">
                   <h2>SPOZNAJ SVET SYM SKUTERJEV</h2>
             </div>
-            <div class="hero-image">
+            <div class="hero-image  scooter-animation">
                   <img class="scooter-image" src="./images/banner-scooter.svg" alt="" srcset="">
             </div>
 
@@ -548,6 +551,10 @@
 
 
 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
       <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
