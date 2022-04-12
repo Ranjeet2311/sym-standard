@@ -13,7 +13,9 @@ gsap.from(".scooter-animation", {
 // -----Horizontal Slider -----------
 
 const swiper = new Swiper(".swiper", {
+  // Optional parameters
   direction: "horizontal",
+  //   loop: true,
   speed: 400,
 
   breakpoints: {
