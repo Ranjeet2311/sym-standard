@@ -147,3 +147,32 @@ function locationsDisplay(local) {
   let showLocations = locations.join("");
   locationsDiv.innerHTML = showLocations;
 }
+
+// --------------------------------------
+const burgerMenu = document.getElementById("burger-menu");
+const burgerMenuWrapper = document.querySelector(".burger-menu-wrapper");
+const nav = document.querySelector("#nav");
+const navLinks = document.querySelector("#nav-links");
+const burgerWrap = document.querySelector(".burger-menu-wrapper");
+// const header = document.querySelector("#header");
+
+// ---- Page scroll --------------
+
+window.addEventListener("scroll", (e) => {
+  if (window.innerHeight + window.pageYOffset == window.innerHeight) {
+    navLinks.classList.remove("hide-navlinks");
+    burgerWrap.classList.remove("padding-reduce");
+
+    console.log("At top");
+  } else {
+    navLinks.classList.add("hide-navlinks");
+    burgerWrap.classList.add("padding-reduce");
+  }
+});
+
+// --------------Hamburger
+
+burgerMenuWrapper.addEventListener("click", function () {
+  burgerMenu.classList.toggle("close");
+  nav.classList.toggle("hide");
+});
