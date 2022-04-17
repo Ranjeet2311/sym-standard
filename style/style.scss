@@ -52,7 +52,7 @@ $backgroundColor: #f8f8f8;
       position: absolute;
       top: 32px;
       left: 106px;
-      transition: all 0.5s ease;
+      transition: all 0.1s ease;
 
       @include at-950px {
         left: 15px;
