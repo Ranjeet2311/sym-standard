@@ -33,7 +33,7 @@ $backgroundColor: #f8f8f8;
   }
 }
 
-@import "_extraStyle.scss";
+// @import "_extraStyle.scss";
 
 .header {
   padding: 50px 100px;
@@ -47,21 +47,16 @@ $backgroundColor: #f8f8f8;
     padding: 0px 0px;
   }
 
-  // &:hover {
-  //   background-color: white;
-  //   transition: all 0.6s ease-in-out;
-
-  //   // @include at-950px {
-  //   //   background-color: none;
-  //   // }
-  // }
-
   .logo-wrap {
     .logo-img {
-      width: 130px;
       position: absolute;
       top: 32px;
-      left: 30px;
+      left: 106px;
+      transition: all 0.5s ease;
+
+      @include at-950px {
+        left: 15px;
+      }
     }
   }
 
@@ -599,10 +594,9 @@ $backgroundColor: #f8f8f8;
 @include at-950px {
   .hide {
     // display: none;
-    transform: translate(-1500px, 0px);
+    transform: translate(+1500px, 0px);
     height: 100vh;
     width: 100%;
-    background-color: green;
   }
 
   .blackbackGround {
@@ -616,13 +610,6 @@ $backgroundColor: #f8f8f8;
   .burgerSpanColor {
     background-color: white;
   }
-
-  // .menuLink-Height {
-  //   // height: 100vh;
-  //   // width: 100%;
-  //   // z-index: 1;
-  //   // margin-top: 8rem;
-  // }
 }
 
 .hide-navlinks {
@@ -636,4 +623,8 @@ $backgroundColor: #f8f8f8;
 
 .padding-reduce {
   width: 110px;
+}
+
+.hideFullWidth {
+  display: none;
 }

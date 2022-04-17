@@ -157,17 +157,12 @@ function locationsDisplay(local) {
   locationsDiv.innerHTML = hideLocations;
 }
 
-// --------------------------------------
-const burgerMenu = document.getElementById("burger-menu");
+// ----------------elements selecting----------------------
 const burgerMenuWrapper = document.querySelector(".burger-menu-wrapper");
 const nav = document.querySelector("#nav");
 const logoBlack = document.querySelector("#logo-black");
 const logoWhite = document.querySelector("#logo-white");
-// const logoWrp = document.querySelector("#logo");
 const navLinks = document.querySelector("#nav-links");
-const burgerWrap = document.querySelector(".burger-menu-wrapper");
-const burgerSpan = document.querySelector("#burger-span");
-const header = document.querySelector("#header");
 const burgerOpen = document.querySelector("#burger-open");
 const burgerClose = document.querySelector("#burger-close");
 
@@ -176,46 +171,22 @@ const burgerClose = document.querySelector("#burger-close");
 window.addEventListener("scroll", (e) => {
   if (window.innerHeight + window.pageYOffset == window.innerHeight) {
     navLinks.classList.remove("hide-navlinks");
-    // logoImg.classList.remove("padding-reduce");
+    logoBlack.style.width = "130px";
 
     console.log("At top");
   } else {
     navLinks.classList.add("hide-navlinks");
-    // logoImg.classList.add("padding-reduce");
+    logoBlack.style.width = "110px";
   }
 });
 
 // --------------Hamburger
 
 burgerMenuWrapper.addEventListener("click", function () {
-  // burgerMenu.classList.toggle("close");
   nav.classList.toggle("hide");
-  // burgerSpan.classList.toggle("burgerSpanColor");
-  // header.classList.toggle("blackbackGround");
   logoBlack.classList.toggle("hide");
   logoWhite.classList.toggle("hide");
+  logoWhite.classList.toggle("hideFullWidth");
   burgerOpen.classList.toggle("hide");
   burgerClose.classList.toggle("hide");
-
-  // header.classList.toggle("menuLink-Height");
-
-  const blackLogo = `<img
-      id="logo-img"
-      class="logo-img"
-      src="./images/SYM_logo2.svg"
-      alt="logo"
-      srcset=""
-    ></img>`;
-
-  const whiteLogo = `<img id="logo-img" class="logo-img" src="./images/SYM_logo2.svg" alt="logo" srcset="">`;
 });
-
-// if ((logoWrp.innerHTML = blackLogo)) {
-//   logoWrp.innerHTML = whiteLogo;
-// } else {
-//   logoWrp.innerHTML = blackLogo;
-// }
-
-// console.log(logoWrp.innerHTML);
-
-// -------------------Additional--------
