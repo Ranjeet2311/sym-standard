@@ -165,7 +165,7 @@ const logoImg = document.querySelector("#logo-img");
 const navLinks = document.querySelector("#nav-links");
 const burgerWrap = document.querySelector(".burger-menu-wrapper");
 const burgerSpan = document.querySelector("#burger-span");
-// const header = document.querySelector("#header");
+const header = document.querySelector("#header");
 
 // ---- Page scroll --------------
 
@@ -187,19 +187,7 @@ burgerMenuWrapper.addEventListener("click", function () {
   burgerMenu.classList.toggle("close");
   nav.classList.toggle("hide");
   burgerSpan.classList.toggle("burgerSpanColor");
+  // header.classList.toggle("blackbackGround");
+  logoImg.classList.toggle("logoFilter");
+  // header.classList.toggle("menuLink-Height");
 });
-
-// ------------
-// $(document).ready(function () {
-//   $("#burger-menu").click(function () {
-//     $(this).toggleClass("open");
-//   });
-// });
-// $(document).ready(function () {
-//   $(".burger-menu-wrapper").click(function () {
-//     $("#burger-menu").toggleClass("open");
-//     $("#nav").toggleClass("hide");
-//     //     $("#burger-span").toggleClass("burgerSpanColor");
-//     $('[id="burger-span"]').toggleClass("burgerSpanColor");
-//   });
-// });

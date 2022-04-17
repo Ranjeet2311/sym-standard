@@ -43,13 +43,18 @@ $backgroundColor: #f8f8f8;
   z-index: 1;
 
   @include at-950px {
-    background-color: white;
+    height: 3vh;
+    padding: 0px 0px;
   }
 
-  &:hover {
-    background-color: white;
-    transition: all 0.6s ease-in-out;
-  }
+  // &:hover {
+  //   background-color: white;
+  //   transition: all 0.6s ease-in-out;
+
+  //   // @include at-950px {
+  //   //   background-color: none;
+  //   // }
+  // }
 
   .logo {
     position: absolute;
@@ -68,6 +73,8 @@ $backgroundColor: #f8f8f8;
     @include at-950px {
       width: 100%;
       transition: all 1s ease-in-out;
+      background: linear-gradient(180deg, #262626 0%, #000000 100%);
+      width: 100vh;
     }
 
     .nav-links {
@@ -103,6 +110,7 @@ $backgroundColor: #f8f8f8;
           @include at-950px {
             font-size: 22px;
             font-weight: 900;
+            color: white;
           }
         }
       }
@@ -323,7 +331,6 @@ $backgroundColor: #f8f8f8;
   height: 70vh;
   background: url("/images/back-Rectangle.svg"), url("/images/Mask-group1.svg");
   background-position: top 0px left -199px, top 2px right -14px;
-  //   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -336,7 +343,6 @@ $backgroundColor: #f8f8f8;
     background-color: transparent;
     display: flex;
     justify-content: flex-start;
-    //     align-items: center;
     flex-direction: column;
     margin-left: 270px;
 
@@ -378,7 +384,6 @@ $backgroundColor: #f8f8f8;
   background-color: #f8f8f8;
   display: flex;
   justify-content: flex-start;
-  //   align-items: center;
   flex-direction: column;
   padding-left: 140px;
   z-index: -1;
@@ -535,7 +540,6 @@ $backgroundColor: #f8f8f8;
       background: transparent;
       flex-direction: column;
       margin-left: 13rem;
-      // position: relative;
 
       .container {
         display: flex;
@@ -546,8 +550,6 @@ $backgroundColor: #f8f8f8;
         margin-top: 1rem;
         position: relative;
         right: 116px;
-
-        //   position: absolute;
 
         @import "_checkbox.scss";
 
@@ -590,8 +592,31 @@ $backgroundColor: #f8f8f8;
 
 @include at-950px {
   .hide {
-    display: none;
+    // display: none;
+    transform: translate(-1500px, 0px);
+    height: 100vh;
+    width: 100%;
+    background-color: green;
   }
+
+  .blackbackGround {
+    background-color: black;
+  }
+
+  .logoFilter {
+    filter: invert(1);
+  }
+
+  .burgerSpanColor {
+    background-color: white;
+  }
+
+  // .menuLink-Height {
+  //   // height: 100vh;
+  //   // width: 100%;
+  //   // z-index: 1;
+  //   // margin-top: 8rem;
+  // }
 }
 
 .hide-navlinks {
@@ -604,11 +629,5 @@ $backgroundColor: #f8f8f8;
 }
 
 .padding-reduce {
-  // padding: 30px 100px;
-  // transition: all 1s ease;
   width: 110px;
-}
-
-.burgerSpanColor {
-  background-color: white;
 }

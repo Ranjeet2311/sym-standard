@@ -7,14 +7,6 @@
           box-sizing: border-box;
 }
 
-.whiteBackground {
-  background-color: white;
-}
-
-.greyBackground {
-  background-color: #f8f8f8;
-}
-
 .burger-menu-wrapper {
   position: absolute;
   top: 0rem;
@@ -91,16 +83,21 @@
   transition: 0.3s ease-in-out;
 }
 
+.burger-menu-wrapper #burger-menu .burger-span,
+.burger-menu-wrapper #burger-menu .burger-span:before,
+.burger-menu-wrapper #burger-menu .burger-span:after {
+  background: black;
+  display: block;
+  height: 3px;
+  opacity: 1;
+  position: absolute;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
 .burger-menu-wrapper #burger-menu .burger-span:before,
 .burger-menu-wrapper #burger-menu .burger-span:after {
   content: "";
-}
-
-#menu.overlay {
-  visibility: visible;
-  opacity: 1;
-  padding-top: 100px;
-  background: rgba(0, 0, 0, 0.5);
 }
 
 .header {
@@ -113,14 +110,9 @@
 
 @media (max-width: 950px) {
   .header {
-    background-color: white;
+    height: 3vh;
+    padding: 0px 0px;
   }
-}
-
-.header:hover {
-  background-color: white;
-  -webkit-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
 }
 
 .header .logo {
@@ -144,6 +136,9 @@
     width: 100%;
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
+    background: -webkit-gradient(linear, left top, left bottom, from(#262626), to(#000000));
+    background: linear-gradient(180deg, #262626 0%, #000000 100%);
+    width: 100vh;
   }
 }
 
@@ -186,6 +181,7 @@
   .header .nav .nav-links li a {
     font-size: 22px;
     font-weight: 900;
+    color: white;
   }
 }
 
@@ -815,7 +811,21 @@
 
 @media (max-width: 950px) {
   .hide {
-    display: none;
+    -webkit-transform: translate(-1500px, 0px);
+            transform: translate(-1500px, 0px);
+    height: 100vh;
+    width: 100%;
+    background-color: green;
+  }
+  .blackbackGround {
+    background-color: black;
+  }
+  .logoFilter {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+  }
+  .burgerSpanColor {
+    background-color: white;
   }
 }
 
@@ -833,9 +843,5 @@
 
 .padding-reduce {
   width: 110px;
-}
-
-.burgerSpanColor {
-  background-color: white;
 }
 /*# sourceMappingURL=style.css.map */
