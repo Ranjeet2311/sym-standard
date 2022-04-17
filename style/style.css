@@ -7,13 +7,6 @@
           box-sizing: border-box;
 }
 
-.burger-menu-wrapper {
-  position: absolute;
-  top: 0rem;
-  right: 1rem;
-  display: none;
-}
-
 @media (max-width: 950px) {
   .burger-menu-wrapper {
     display: block;
@@ -79,8 +72,8 @@
   height: 3px;
   opacity: 1;
   position: absolute;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
 }
 
 .burger-menu-wrapper #burger-menu .burger-span,
@@ -91,8 +84,8 @@
   height: 3px;
   opacity: 1;
   position: absolute;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
 }
 
 .burger-menu-wrapper #burger-menu .burger-span:before,
@@ -115,14 +108,11 @@
   }
 }
 
-.header .logo {
-  position: absolute;
-  top: 50px;
-  left: 100px;
-}
-
-.header .logo .logo-img {
+.header .logo-wrap .logo-img {
   width: 130px;
+  position: absolute;
+  top: 32px;
+  left: 30px;
 }
 
 .header .nav {
@@ -134,11 +124,11 @@
 @media (max-width: 950px) {
   .header .nav {
     width: 100%;
-    -webkit-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
     background: -webkit-gradient(linear, left top, left bottom, from(#262626), to(#000000));
     background: linear-gradient(180deg, #262626 0%, #000000 100%);
-    width: 100vh;
+    width: 100vw;
   }
 }
 
@@ -185,16 +175,25 @@
   }
 }
 
-.header .burger-menu {
-  height: 30px;
-  width: 30px;
+.header .burger-menu-wrapper .menu-open,
+.header .burger-menu-wrapper .menu-close {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  display: none;
   cursor: pointer;
 }
 
-.header .burger-menu .line {
-  background-color: black;
-  height: 1px;
-  margin: 8px 0;
+@media (max-width: 950px) {
+  .header .burger-menu-wrapper .menu-open,
+  .header .burger-menu-wrapper .menu-close {
+    display: block;
+  }
+}
+
+.header .burger-menu-wrapper .burger-menu {
+  height: 30px;
+  width: 30px;
 }
 
 .hero-section {

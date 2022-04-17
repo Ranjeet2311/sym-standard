@@ -153,41 +153,69 @@ function locationsDisplay(local) {
                   </div>`;
   });
 
-  let showLocations = locations.join("");
-  locationsDiv.innerHTML = showLocations;
+  let hideLocations = locations.join("");
+  locationsDiv.innerHTML = hideLocations;
 }
 
 // --------------------------------------
 const burgerMenu = document.getElementById("burger-menu");
 const burgerMenuWrapper = document.querySelector(".burger-menu-wrapper");
 const nav = document.querySelector("#nav");
-const logoImg = document.querySelector("#logo-img");
+const logoBlack = document.querySelector("#logo-black");
+const logoWhite = document.querySelector("#logo-white");
+// const logoWrp = document.querySelector("#logo");
 const navLinks = document.querySelector("#nav-links");
 const burgerWrap = document.querySelector(".burger-menu-wrapper");
 const burgerSpan = document.querySelector("#burger-span");
 const header = document.querySelector("#header");
+const burgerOpen = document.querySelector("#burger-open");
+const burgerClose = document.querySelector("#burger-close");
 
 // ---- Page scroll --------------
 
 window.addEventListener("scroll", (e) => {
   if (window.innerHeight + window.pageYOffset == window.innerHeight) {
     navLinks.classList.remove("hide-navlinks");
-    logoImg.classList.remove("padding-reduce");
+    // logoImg.classList.remove("padding-reduce");
 
     console.log("At top");
   } else {
     navLinks.classList.add("hide-navlinks");
-    logoImg.classList.add("padding-reduce");
+    // logoImg.classList.add("padding-reduce");
   }
 });
 
 // --------------Hamburger
 
 burgerMenuWrapper.addEventListener("click", function () {
-  burgerMenu.classList.toggle("close");
+  // burgerMenu.classList.toggle("close");
   nav.classList.toggle("hide");
-  burgerSpan.classList.toggle("burgerSpanColor");
+  // burgerSpan.classList.toggle("burgerSpanColor");
   // header.classList.toggle("blackbackGround");
-  logoImg.classList.toggle("logoFilter");
+  logoBlack.classList.toggle("hide");
+  logoWhite.classList.toggle("hide");
+  burgerOpen.classList.toggle("hide");
+  burgerClose.classList.toggle("hide");
+
   // header.classList.toggle("menuLink-Height");
+
+  const blackLogo = `<img
+      id="logo-img"
+      class="logo-img"
+      src="./images/SYM_logo2.svg"
+      alt="logo"
+      srcset=""
+    ></img>`;
+
+  const whiteLogo = `<img id="logo-img" class="logo-img" src="./images/SYM_logo2.svg" alt="logo" srcset="">`;
 });
+
+// if ((logoWrp.innerHTML = blackLogo)) {
+//   logoWrp.innerHTML = whiteLogo;
+// } else {
+//   logoWrp.innerHTML = blackLogo;
+// }
+
+// console.log(logoWrp.innerHTML);
+
+// -------------------Additional--------

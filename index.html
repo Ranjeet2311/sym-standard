@@ -6,6 +6,9 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel="stylesheet" href="./style/style.css">
 
       <title>SYM-Scooter</title>
@@ -13,8 +16,10 @@
 
 <body>
       <header id="header" class="header">
-            <div id="logo" class="logo">
-                  <img id="logo-img" class="logo-img" src="./images/SYM_logo 2.svg" alt="logo" srcset="">
+            <div class="logo-wrap">
+                  <img id="logo-black" class="logo-img logo" src="./images/SYM_logo2.svg" alt="logo">
+                  <img id="logo-white" class="logo-img logo hide" src="./images/SYM_logo-white.svg" alt="logo">
+
             </div>
             <div id="nav" class="nav hide">
                   <ul id="nav-links" class="nav-links">
@@ -28,9 +33,15 @@
 
             <div class="burger-menu-wrapper">
 
-                  <div id="burger-menu" class="burger-menu">
+                  <!-- <div id="burger-menu" class="burger-menu">
+
                         <span id="burger-span" class="burger-span"></span>
-                  </div>
+                  </div> -->
+                  <!-- <div id="burger-menu" class="burger-menu"> -->
+
+                  <img id="burger-open" class="menu-open" src="./images/icons/burger.svg" alt="open">
+                  <img id="burger-close" class="menu-close hide" src="./images/icons/close.svg" alt="close">
+                  <!-- </div> -->
             </div>
       </header>
 

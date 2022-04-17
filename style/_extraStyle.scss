@@ -3,10 +3,10 @@
 // ------habburger -------
 
 .burger-menu-wrapper {
-  position: absolute;
-  top: 0rem;
-  right: 1rem;
-  display: none;
+  // position: absolute;
+  // top: 0rem;
+  // right: 1rem;
+  // display: none;
 
   @include at-950px {
     display: block;
@@ -63,7 +63,7 @@
     height: 3px;
     opacity: 1;
     position: absolute;
-    transition: 0.3s ease-in-out;
+    transition: 0.6s ease-in-out;
   }
   #burger-menu .burger-span,
   #burger-menu .burger-span:before,
@@ -73,7 +73,7 @@
     height: 3px;
     opacity: 1;
     position: absolute;
-    transition: 0.3s ease-in-out;
+    transition: 0.6s ease-in-out;
   }
 
   #burger-menu .burger-span:before,
@@ -83,3 +83,37 @@
 }
 
 // ----utility Css Ends-----------------------
+
+// .burger {
+//   position: absolute;
+//   top: 15px;
+//   right: 5%;
+//   font-size: 4rem;
+//   color: silver;
+//   margin: 0px auto;
+//   cursor: pointer;
+// }
+
+// .burger-item {
+//   // opacity: 0;
+
+//   &:hover {
+//     transform: scale(1.2);
+//     transition: all 0.3s ease-in-out;
+//   }
+// }
+
+// .close-item {
+//   color: silver;
+//   position: absolute;
+//   top: 0px;
+//   right: 5%;
+//   transform: skew(5, 4);
+//   opacity: 0;
+
+//   &:hover {
+//     transform: rotate(90deg) scale(1.2);
+//     transition: all 0.8s ease-out;
+//     color: grey;
+//   }
+// }

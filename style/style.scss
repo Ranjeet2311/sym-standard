@@ -56,12 +56,12 @@ $backgroundColor: #f8f8f8;
   //   // }
   // }
 
-  .logo {
-    position: absolute;
-    top: 50px;
-    left: 100px;
+  .logo-wrap {
     .logo-img {
       width: 130px;
+      position: absolute;
+      top: 32px;
+      left: 30px;
     }
   }
 
@@ -72,17 +72,15 @@ $backgroundColor: #f8f8f8;
 
     @include at-950px {
       width: 100%;
-      transition: all 1s ease-in-out;
+      transition: all 0.6s ease-in-out;
       background: linear-gradient(180deg, #262626 0%, #000000 100%);
-      width: 100vh;
+      width: 100vw;
     }
 
     .nav-links {
       float: right;
 
       @include at-950px {
-        // flex-direction: column;
-        // justify-content: flex-start;
         height: 100vh;
         width: 100%;
         z-index: 1;
@@ -117,15 +115,23 @@ $backgroundColor: #f8f8f8;
     }
   }
 
-  .burger-menu {
-    height: 30px;
-    width: 30px;
-    cursor: pointer;
+  .burger-menu-wrapper {
+    .menu-open,
+    .menu-close {
+      position: absolute;
+      top: 2rem;
+      right: 1rem;
+      display: none;
+      cursor: pointer;
 
-    .line {
-      background-color: black;
-      height: 1px;
-      margin: 8px 0;
+      @include at-950px {
+        display: block;
+      }
+    }
+
+    .burger-menu {
+      height: 30px;
+      width: 30px;
     }
   }
 }
