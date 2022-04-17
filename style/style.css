@@ -74,7 +74,7 @@
 
 @media (max-width: 950px) {
   .header .nav .nav-links li {
-    margin-top: 4rem;
+    margin-top: 32px;
     display: block;
     text-align: center;
   }
