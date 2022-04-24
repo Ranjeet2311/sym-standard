@@ -1,5 +1,4 @@
 .styled-checkbox {
-  // position: absolute; // take it out of document flow
   opacity: 0; // hide it
   background-color: transparent;
 
@@ -39,7 +38,6 @@
     border-radius: 3px;
   }
 
-  // Checkmark. Could be replaced with an image
   &:checked + label:after {
     content: "";
     position: absolute;
@@ -53,26 +51,3 @@
     transform: rotate(45deg);
   }
 }
-
-// Demo-only styles
-// --------------
-
-// .unstyled {
-//   margin: 0;
-//   padding: 0;
-//   list-style-type: none;
-// }
-
-// li {
-//   margin: 20px 0;
-// }
-
-// .centered {
-//   width: 300px;
-//   margin: auto;
-// }
-
-// .title {
-//   text-align: center;
-//   color: rgb(69, 113, 236);
-// }
