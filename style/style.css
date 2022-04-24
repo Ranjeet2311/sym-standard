@@ -19,6 +19,7 @@
   .header {
     height: 3vh;
     padding: 0px 0px;
+    z-index: 100;
   }
 }
 
