@@ -45,6 +45,7 @@ $backgroundColor: #f8f8f8;
   @include at-950px {
     height: 3vh;
     padding: 0px 0px;
+    z-index: 100;
   }
 
   .logo-wrap {
